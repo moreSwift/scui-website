@@ -1,0 +1,19 @@
+<script lang="ts">
+	import { Tabs as TabsPrimitive } from "bits-ui";
+	import { cn } from "$lib/utils.js";
+
+	type $$Props = TabsPrimitive.ListProps;
+
+	let className: $$Props["class"] = undefined;
+	export { className as class };
+</script>
+
+<TabsPrimitive.List
+	class={cn(
+		"text-muted-foreground inline-flex h-15 items-center justify-center rounded-md p-2 glass",
+		className
+	)}
+	{...$$restProps}
+>
+	<slot />
+</TabsPrimitive.List>
