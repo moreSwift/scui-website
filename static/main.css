@@ -48,6 +48,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   overflow-x: hidden;
 }
 
@@ -133,6 +135,7 @@ img.default-hidden {
 
   #main {
     padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .subheadline {
