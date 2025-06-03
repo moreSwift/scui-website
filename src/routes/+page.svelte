@@ -51,15 +51,15 @@
     <div class="subheadline">Native UI without the fuss.</div>
 
     <div class="container">
-        <div class="zstack">
+        <div class="zstack" id="hero-image">
             {#each backends as backend}
-                <img src={`images/music-player/${backend}.webp`} alt={`A music player made with SwiftCrossUI running on ${platform(backend)}`} class={`desktop-preview default-hidden ${backend == selectedBackend ? "shown" : ""}`} id="hero-image" />
+                <img src={`images/music-player/${backend}-utah.webp`} alt={`A music player made with SwiftCrossUI running on ${platform(backend)}`} class={`desktop-preview default-hidden ${backend == selectedBackend ? "shown" : ""}`}/>
             {/each}
         </div>
 
         <div class="row" id="floating-controls">
-            <Tabs.Root bind:value={selectedBackend} class="w-[400px]">
-              <Tabs.List class="grid w-full grid-cols-3">
+            <Tabs.Root bind:value={selectedBackend} class="w-[350px]">
+              <Tabs.List class="grid m-auto grid-cols-3 tabs">
                 <Tabs.Trigger value="appkitbackend">macOS</Tabs.Trigger>
                 <Tabs.Trigger value="gtkbackend">Linux</Tabs.Trigger>
                 <Tabs.Trigger value="winuibackend">Windows</Tabs.Trigger>
