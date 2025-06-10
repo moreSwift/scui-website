@@ -55,13 +55,15 @@ body {
 
 .headline {
   font-size: 4rem;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .subheadline {
   font-size: 1.5rem;
   color: var(--gray-fg);
   margin: 0;
+  margin-top: -1rem;
+  margin-bottom: 1.2rem;
 }
 
 .container {
@@ -172,6 +174,10 @@ img.default-hidden {
 
   #hero-image {
     margin-top: 3rem;
+  }
+
+  .subheadline {
+    margin-bottom: 2rem;
   }
 }
 
