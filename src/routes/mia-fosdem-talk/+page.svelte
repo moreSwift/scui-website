@@ -29,8 +29,9 @@
   <ul>
     <li><a href="https://drive.google.com/file/d/1rDYBqiZ1v5qV6_058HU4Ca79y6cGuQYt/view?usp=sharing">macOS x86_64</a></li>
     <li><a href="https://drive.google.com/file/d/1tMKLbCS8xTd1Qka-0qZIWfDv4qjEjNP1/view?usp=sharing">macOS arm64</a></li>
-    <li><a href="https://drive.google.com/file/d/1vDoPGzSF6evxEMLaLnoIuXJVXqlZFNZU/view?usp=sharing">Linux x86_64</a></li>
-    <li><a href="https://drive.google.com/file/d/14nXkmz7SaAUjdMmpB_PeMhYTeyx37e8t/view?usp=sharing">Windows x86_64</a></li>
+    <li><a href="https://drive.google.com/file/d/1vDoPGzSF6evxEMLaLnoIuXJVXqlZFNZU/view?usp=sharing">Linux x86_64 (rpm)</a></li>
+    <li><a href="https://drive.google.com/file/d/1552mXrs-y8gcNPeaOqFpJ0sIFsJHEsHj/view?usp=sharing">Linux x86_64 (AppImage)</a></li>
+    <li><a href="https://drive.google.com/file/d/14nXkmz7SaAUjdMmpB_PeMhYTeyx37e8t/view?usp=sharing">Windows x86_64 (msi)</a></li>
   </ul>
   <p style="margin-top: 0.5rem">
     Note: The Windows version of the music player requires that you install <a href="https://aka.ms/windowsappsdk/1.5/1.5.240205001-preview1/windowsappruntimeinstall-x64.exe">version 1.5.240205001-preview1 WindowsAppSDK runtime</a>. This is a limitation of Swift Bundler + SwiftCrossUI that we plan to address in the near future (once Android support is off the ground).
