@@ -33,7 +33,7 @@
     <section>
         <a href="https://docs.swiftcrossui.dev/documentation/swiftcrossui/">Docs</a>
         <a href="https://github.com/moreSwift/swift-cross-ui">GitHub</a>
-        <a href="https://discord.gg/8sADBGxWwZ">Discord</a>
+        <a href="https://moreswift.dev/discord">Discord</a>
         
         <Button on:click={toggleMode} variant="outline" size="icon">
             <Sun
