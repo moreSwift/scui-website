@@ -24,7 +24,7 @@
 
 <div id="content">
   <h1>Community</h1>
-  <p>Join the <a href="https://discord.gg/fw2trT48ny">moreSwift Discord server</a>!</p>
+  <p>Join the <a href="https://discord.gg/8sADBGxWwZ">moreSwift Discord server</a>!</p>
   <h1>Music Player builds (<a href="https://github.com/moreSwift/swift-cross-ui/tree/stackotter/music_player/Examples/Sources/MusicPlayerExample">src</a>)</h1>
   <ul>
     <li><a href="https://drive.google.com/file/d/1rDYBqiZ1v5qV6_058HU4Ca79y6cGuQYt/view?usp=sharing">macOS x86_64</a></li>
