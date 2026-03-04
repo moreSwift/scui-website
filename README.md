@@ -1,4 +1,10 @@
-# website
+## The SwiftCrossUI website
+
+This repository holds the code for [SwiftCrossUI's website](https://swiftcrossui.dev).
+
+The website is written in Svelte and uses [shadcn-svelte](https://shadcn-svelte.com/) for its base components.
+
+### Development
 
 To install dependencies:
 
@@ -11,5 +17,3 @@ To run:
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.2.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
