@@ -38,9 +38,9 @@
   </p>
   <h1>Interested in sponsoring?</h1>
   <p>
-      moreSwift is a relatively new organisation and we're still figuring out how best to accept donations. If you or your company are interested in becoming a sponsor of moreSwift, please contact stackotter at <a href="mailto:stackotter@stackotter.dev">stackotter@stackotter.dev</a> or via any of his other <a href="https://stackotter.dev/contact">contact details</a>.
+    moreSwift now has an [Open Collective](https://opencollective.com/moreswift) page. Open Collective allows us to manage donations transparently and easily distribute funds to the various contributors.
   </p>
   <p style="margin-top: 0.5rem">
-    For quick donations you can sponsor stackotter directly via his <a href="https://github.com/sponsors/stackotter">GitHub Sponsors page</a>.
+    You can also sponsor stackotter directly via his <a href="https://github.com/sponsors/stackotter">GitHub Sponsors page</a>.
   </p>
 </div>
