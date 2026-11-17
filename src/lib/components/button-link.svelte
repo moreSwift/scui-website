@@ -9,10 +9,12 @@
 
 <a
   {href}
-  class={`btn ${variant === "default" ? "btn-primary" : "btn-outline"} ${buttonVariants({
-    variant,
-    size,
-  })} ${className}`}
+  class={`btn ${variant === "default" ? "btn-primary" : "btn-outline"} ${buttonVariants(
+    {
+      variant,
+      size,
+    },
+  )} ${className}`}
 >
   <slot />
 </a>
