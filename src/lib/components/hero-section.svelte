@@ -13,11 +13,40 @@
     { id: "winuibackend", platform: "Windows" },
   ] as const;
 
+  const mobilePlatforms = [
+    {
+      id: "ios",
+      name: "iOS",
+      image: "/images/music-player/iphone.webp",
+      alt: "MusicPlayerExample running on an iPhone",
+      width: 553,
+      height: 1200,
+    },
+    {
+      id: "android",
+      name: "Android",
+      image: "/images/music-player/android.webp",
+      alt: "MusicPlayerExample running on an Android phone",
+      width: 553,
+      height: 1229,
+    },
+  ] as const;
+
   type BackendId = (typeof desktopBackends)[number]["id"];
+  type MobilePlatformId = (typeof mobilePlatforms)[number]["id"];
+  type MobileView = "mobile" | "desktop";
+
   let selectedBackend: BackendId = "appkitbackend";
+  let selectedMobilePlatform: MobilePlatformId = "ios";
+  let mobileView: MobileView = "mobile";
+
   $: selectedPlatform =
     desktopBackends.find((backend) => backend.id === selectedBackend)
       ?.platform ?? "macOS";
+  $: selectedMobile =
+    mobilePlatforms.find(
+      (platform) => platform.id === selectedMobilePlatform,
+    ) ?? mobilePlatforms[0];
 </script>
 
 <section class="hero">
@@ -25,8 +54,8 @@
 
   <div class="hero-inner">
     <h1 class="hero-title">
-      Native apps in Swift.<br />
-      <span class="gradient-text">On six platforms.</span>
+      Native Swift apps.<br />
+      <span class="gradient-text">Everywhere.</span>
     </h1>
 
     <div class="hero-actions">
@@ -61,7 +90,7 @@
 
   <div class="showcase">
     <div class="showcase-toolbar">
-      <Tabs.Root bind:value={selectedBackend}>
+      <Tabs.Root class="showcase-desktop-tabs" bind:value={selectedBackend}>
         <Tabs.List class="tabs showcase-tabs grid grid-cols-3">
           {#each desktopBackends as backend}
             <Tabs.Trigger value={backend.id}>{backend.platform}</Tabs.Trigger>
@@ -71,14 +100,47 @@
 
       <div class="showcase-device-group">
         <span class="showcase-plus" aria-hidden="true">+</span>
-        <span class="showcase-device">
-          <PlatformIcon name="ios" size={14} />
-          iPhone 16 preview
-        </span>
+        <Tabs.Root bind:value={selectedMobilePlatform}>
+          <Tabs.List
+            class="tabs showcase-tabs showcase-mobile-tabs grid grid-cols-2"
+            aria-label="Mobile platform"
+          >
+            {#each mobilePlatforms as platform}
+              <Tabs.Trigger value={platform.id}>{platform.name}</Tabs.Trigger>
+            {/each}
+          </Tabs.List>
+        </Tabs.Root>
+      </div>
+
+      <div
+        class="showcase-mobile-toggle"
+        role="group"
+        aria-label="Preview device"
+      >
+        <button
+          type="button"
+          class:active={mobileView === "mobile"}
+          aria-pressed={mobileView === "mobile"}
+          on:click={() => (mobileView = "mobile")}
+        >
+          Mobile
+        </button>
+        <button
+          type="button"
+          class:active={mobileView === "desktop"}
+          aria-pressed={mobileView === "desktop"}
+          on:click={() => (mobileView = "desktop")}
+        >
+          Desktop
+        </button>
       </div>
     </div>
 
-    <div class="showcase-stage">
+    <div
+      class="showcase-stage"
+      class:show-mobile={mobileView === "mobile"}
+      class:show-desktop={mobileView === "desktop"}
+    >
       <div class="desktop-shot">
         {#each desktopBackends as backend}
           <img
@@ -91,18 +153,47 @@
         {/each}
       </div>
 
-      <div class="phone-shot">
+      <div
+        class="phone-shot desktop-phone"
+        class:phone-android={selectedMobile.id === "android"}
+      >
         <img
-          src="/images/music-player/iphone.webp"
-          alt="MusicPlayerExample running on an iPhone"
-          width="553"
-          height="1200"
+          src={selectedMobile.image}
+          alt={selectedMobile.alt}
+          width={selectedMobile.width}
+          height={selectedMobile.height}
         />
+      </div>
+
+      <div class="mobile-phones">
+        {#each mobilePlatforms as platform}
+          <div class="mobile-phone-preview">
+            <div
+              class="phone-shot"
+              class:phone-android={platform.id === "android"}
+            >
+              <img
+                src={platform.image}
+                alt={platform.alt}
+                width={platform.width}
+                height={platform.height}
+              />
+            </div>
+            <span class="mobile-phone-label">{platform.name}</span>
+          </div>
+        {/each}
       </div>
     </div>
 
     <p class="showcase-caption">
-      MusicPlayerExample on {selectedPlatform} and iPhone.
+      <span class="caption-wide">
+        MusicPlayerExample on {selectedPlatform} and {selectedMobile.name}.
+      </span>
+      <span class="caption-mobile">
+        {mobileView === "mobile"
+          ? "MusicPlayerExample on iOS and Android."
+          : `MusicPlayerExample on ${selectedPlatform}.`}
+      </span>
     </p>
   </div>
 </section>

@@ -2,7 +2,7 @@ export const quickStartSteps = [
   {
     number: "1",
     title: "Install Swift Bundler",
-    lines: ["mint install moreSwift/swift-bundler@main"],
+    kind: "install" as const,
   },
   {
     number: "2",
