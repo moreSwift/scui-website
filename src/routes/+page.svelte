@@ -54,7 +54,7 @@
       </svelte:fragment>
     </SectionHeading>
 
-    <CardGrid>
+    <CardGrid className="platform-card-grid">
       {#each platformCards as platform}
         <ContentCard
           href={platform.href}
@@ -75,7 +75,7 @@
       <svelte:fragment slot="title">The building blocks.</svelte:fragment>
     </SectionHeading>
 
-    <CardGrid>
+    <CardGrid className="feature-card-grid">
       {#each featureCards as feature}
         <ContentCard
           title={feature.title}
