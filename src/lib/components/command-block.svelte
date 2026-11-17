@@ -49,4 +49,8 @@
   }
 </script>
 
-<pre class={`command-block ${className}`}><code>{#each tokenize(lines) as token}{#if token.className}<span class={token.className}>{token.text}</span>{:else}{token.text}{/if}{/each}</code></pre>
+<pre class={`command-block ${className}`}><code
+    >{#each tokenize(lines) as token}{#if token.className}<span
+          class={token.className}>{token.text}</span
+        >{:else}{token.text}{/if}{/each}</code
+  ></pre>
