@@ -69,10 +69,13 @@
         </Tabs.List>
       </Tabs.Root>
 
-      <span class="showcase-device">
-        <PlatformIcon name="ios" size={14} />
-        iPhone 16 · iOS
-      </span>
+      <div class="showcase-device-group">
+        <span class="showcase-plus" aria-hidden="true">+</span>
+        <span class="showcase-device">
+          <PlatformIcon name="ios" size={14} />
+          iPhone 16 preview
+        </span>
+      </div>
     </div>
 
     <div class="showcase-stage">
