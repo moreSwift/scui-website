@@ -43,6 +43,7 @@
   --accent-bg-blue: rgba(105, 164, 255, 0.12);
   --accent-bg-green: rgba(98, 217, 139, 0.12);
   --sponsor-pink: #ec4899;
+  --active-install-platform: #ccd;
 
   --gradient-text: linear-gradient(
     105deg,
@@ -1270,7 +1271,7 @@ a.content-card:hover .card-icon {
 }
 
 .install-platforms button.active {
-  background: hsl(var(--primary));
+  background: var(--active-install-platform);
   color: hsl(var(--primary-foreground));
 }
 

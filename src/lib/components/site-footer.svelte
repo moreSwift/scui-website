@@ -40,8 +40,8 @@
   <div class="footer-bottom">
     <span>© {new Date().getFullYear()} SwiftCrossUI contributors</span>
     <span>
-      Swift and SwiftUI are trademarks of Apple Inc. SwiftCrossUI is not
-      affiliated with Apple.
+      Swift and SwiftUI are trademarks of Apple Inc. moreSwift is not affiliated
+      with Apple.
     </span>
   </div>
 </footer>

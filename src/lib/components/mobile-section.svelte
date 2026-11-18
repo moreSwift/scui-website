@@ -22,8 +22,8 @@
       <p class="eyebrow">Mobile</p>
       <h2 class="section-title">The same app, built for touch.</h2>
       <p class="section-lead">
-        The same views and state work across desktop and mobile, with extra APIs
-        for touch.
+        The same views and state work across desktop and mobile, with additional
+        APIs for touch.
       </p>
 
       <ul class="feature-list">
@@ -31,16 +31,15 @@
           <code>NavigationSplitView</code> becomes a single-column layout on
           phones, while <code>NavigationStack</code> keeps native back behaviour.
         </CheckItem>
-        <CheckItem as="li" title="Sheets and alerts.">
-          Sheets support detents, and alerts support action buttons.
+        <CheckItem as="li" title="Fluid sheets.">
+          Sheets support detents, and interactive dismissal.
         </CheckItem>
         <CheckItem as="li" title="Device-aware layout.">
-          Read the device class and orientation, and dismiss the keyboard while
-          scrolling.
+          Branch on device class to make sure that your app always looks great.
         </CheckItem>
         <CheckItem as="li" title="Simulator and device workflow.">
-          Run on an iPhone or Android emulator from the same project with Swift
-          Bundler.
+          Run on iOS and Android simulators and devices from one project with
+          Swift Bundler.
         </CheckItem>
       </ul>
 
