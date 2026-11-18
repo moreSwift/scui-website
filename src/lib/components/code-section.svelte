@@ -158,11 +158,6 @@ struct ProfileView: View {
     <svelte:fragment slot="title">
       Feels like SwiftUI.<br />Runs where SwiftUI can't.
     </svelte:fragment>
-    <svelte:fragment slot="lead">
-      Apps are built from <code>App</code>, <code>Scene</code> and
-      <code>View</code>, with view builders and modifiers that work the way you
-      expect.
-    </svelte:fragment>
   </SectionHeading>
 
   <div class="code-feature">
@@ -212,7 +207,7 @@ struct ProfileView: View {
       </div>
 
       <div class="code-footer">
-        <span>Swift 5.10+ · DefaultBackend</span>
+        <span>Swift 5.10+</span>
         <a href={`${docs}/tutorials/swiftcrossui/quick-start`}>
           Read the quick start
           <ArrowRight size="14" ariaLabel="" />
@@ -233,9 +228,9 @@ struct ProfileView: View {
         Sheets, alerts, menus, file pickers, URL handling and multi-window
         scenes are built in.
       </CheckItem>
-      <CheckItem as="li" title="Native views when you need them">
-        Use the underlying native views, or add a platform feature your app
-        needs.
+      <CheckItem as="li" title="Use native views when you need them">
+        Make your own native view wrappers, or inspect the native views backing
+        built-in views.
       </CheckItem>
     </ul>
   </div>

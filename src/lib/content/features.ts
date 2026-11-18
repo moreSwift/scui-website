@@ -10,28 +10,34 @@ export const featureCards = [
     icon: Slider,
     title: "Native controls",
     description:
-      "The standard controls your app needs, rendered by the platform's own widgets.",
+      "The standard controls your app needs, rendered using the platform's own widgets.",
     tags: ["Button", "TextField", "Slider", "Toggle", "Picker", "List"],
+  },
+  {
+    icon: LightningBolt,
+    title: "Hot reloading",
+    description:
+      "Reload your app as you edit when paired with Swift Bundler. Codable state persists across reloads. Available on macOS and Linux.",
+    tags: ["@HotReloadable", "sbun run --hot"],
   },
   {
     icon: Frame,
     title: "Adaptive layout",
     description:
-      "Build screens with stacks, frames and padding, and scroll when the content grows.",
+      "Screens composed from built-in views and modifiers adapt to look great everywhere.",
     tags: ["HStack", "VStack", "ZStack", "ScrollView", "GeometryReader"],
   },
   {
     icon: CardStack,
     title: "Navigation",
-    description:
-      "Stack navigation and split-view layouts with typed destinations.",
+    description: "Stack navigation and split-view layouts.",
     tags: ["NavigationStack", "NavigationSplitView", "NavigationPath"],
   },
   {
     icon: Layers,
     title: "State and persistence",
     description:
-      "Reactive state, bindings and environment values, plus storage for small persisted values.",
+      "Reactive state, bindings, environment values, and persistent storage for Codable values.",
     tags: ["@State", "@Binding", "@Environment", "@AppStorage"],
   },
   {
@@ -40,12 +46,5 @@ export const featureCards = [
     description:
       "Tap and hover gestures, keyboard focus, text selection and tooltips.",
     tags: ["onTapGesture", "onHover", "focusable", "help"],
-  },
-  {
-    icon: LightningBolt,
-    title: "Hot reloading",
-    description:
-      "Reload your app as you edit when paired with Swift Bundler. Codable state can persist across reloads.",
-    tags: ["@HotReloadable", "sbun run --hot"],
   },
 ];

@@ -49,8 +49,8 @@
     <SectionHeading eyebrow="Platforms">
       <svelte:fragment slot="title">Six platforms.</svelte:fragment>
       <svelte:fragment slot="lead">
-        Each platform has its own backend, so controls and behaviour match the
-        platform.
+        Each platform has a native backend, so controls and behaviour always
+        match the platform.
       </svelte:fragment>
     </SectionHeading>
 
@@ -106,20 +106,27 @@
     <SectionHeading eyebrow="Backends">
       <svelte:fragment slot="title">Native by default.</svelte:fragment>
       <svelte:fragment slot="lead">
-        Each platform has a backend that connects SwiftCrossUI to its native UI
-        toolkit. Use a built-in backend, or write your own.
+        Each platform has a native backend that renders your app using the
+        platform's native UI toolkit. For advanced usecases such as embedded
+        devices, you can bring your own backend.
       </svelte:fragment>
     </SectionHeading>
 
     <CardGrid columns={2}>
       <InfoCard title="Use a built-in backend">
-        Choose <code>AppKitBackend</code>, <code>UIKitBackend</code>,
+        <code>DefaultBackend</code> automatically selects the best backend for
+        your target platform. Choose <code>AppKitBackend</code>,
+        <code>UIKitBackend</code>,
         <code>AndroidBackend</code>, <code>WinUIBackend</code>,
         <code>GtkBackend</code> or <code>Gtk3Backend</code> to achieve a native look.
       </InfoCard>
-      <InfoCard title="Write your own">
-        Backends implement the features they support. If you need a missing
-        feature, you can add it in your app code.
+      <InfoCard title="Bring your own">
+        The <a
+          href="https://docs.swiftcrossui.dev/documentation/swiftcrossui/backendfeatures"
+          ><code>BackendFeatures</code></a
+        > system makes it easy to implement new backends. Each feature has its own
+        protocol. You can extend existing backends to implement missing features from
+        your own app code.
       </InfoCard>
     </CardGrid>
   </PageSection>

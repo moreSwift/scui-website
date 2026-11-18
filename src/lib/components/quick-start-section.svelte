@@ -13,9 +13,9 @@
       <p class="eyebrow">Quick start</p>
       <h2 class="section-title">Run your first app.</h2>
       <p class="section-lead">
-        Swift Bundler provides the <code>sbun</code> CLI, which creates the project,
-        builds the app bundle and handles device deployment. The SwiftCrossUI template
-        gives you a working window in minutes, without creating an Xcode project.
+        Swift Bundler builds bundles apps for every major platform and handles
+        device/simulator deployment. Its SwiftCrossUI template gives you a
+        working window in minutes.
       </p>
       <ButtonLink href={`${docs}/tutorials/swiftcrossui/quick-start`} size="lg">
         Read the full guide
