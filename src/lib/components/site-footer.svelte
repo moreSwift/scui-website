@@ -1,6 +1,6 @@
 <script lang="ts">
   import Brand from "$lib/components/brand.svelte";
-  import { discord, docs, github, sponsor } from "$lib/site";
+  import { bundler, discord, docs, github, sponsor } from "$lib/site";
   import DiscordLogo from "svelte-radix/DiscordLogo.svelte";
   import Heart from "svelte-radix/Heart.svelte";
 </script>
@@ -25,6 +25,7 @@
         <h3>Resources</h3>
         <a href={`${docs}/documentation/swiftcrossui/`}>Documentation</a>
         <a href={`${docs}/tutorials/swiftcrossui/quick-start`}>Tutorial</a>
+        <a href={bundler}>Swift Bundler</a>
         <a href={github}>GitHub</a>
         <a href={`${github}/blob/main/LICENSE`}>License</a>
       </div>
