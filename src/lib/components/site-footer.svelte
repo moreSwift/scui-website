@@ -10,7 +10,7 @@
     <div class="footer-brand">
       <Brand />
       <p>A SwiftUI-style framework for native apps.</p>
-      <p class="footer-note">MIT licensed. Built by the moreSwift community.</p>
+      <p class="footer-note">MIT licensed.</p>
     </div>
 
     <div class="footer-links">

@@ -3,6 +3,8 @@
   import { Button } from "$lib/components/ui/button";
   import { discord, docs, github, sponsor } from "$lib/site";
   import { toggleMode } from "mode-watcher";
+  import DiscordLogo from "svelte-radix/DiscordLogo.svelte";
+  import GithubLogo from "svelte-radix/GithubLogo.svelte";
   import Heart from "svelte-radix/Heart.svelte";
   import Moon from "svelte-radix/Moon.svelte";
   import Sun from "svelte-radix/Sun.svelte";
@@ -12,18 +14,34 @@
   <nav class="site-nav" aria-label="Main navigation">
     <Brand />
 
-    <div class="nav-links">
-      <a href="#features" class="nav-secondary">Features</a>
-      <a href="#platforms" class="nav-secondary">Platforms</a>
-      <a href="#examples" class="nav-secondary">Examples</a>
-      <a href={`${docs}/documentation/swiftcrossui/`} class="nav-tertiary"
-        >Docs</a
+    <div class="nav-center">
+      <a href="#features">Overview</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#quickstart">Quick start</a>
+      <a href="#examples">Examples</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href={`${docs}/documentation/swiftcrossui/`} class="nav-docs">Docs</a>
+      <a
+        href={github}
+        class="nav-icon"
+        aria-label="SwiftCrossUI on GitHub"
+        title="GitHub"
       >
-      <a href={github} class="nav-github">GitHub</a>
-      <a href={discord} class="nav-tertiary">Discord</a>
+        <GithubLogo size="17" ariaLabel="" />
+      </a>
+      <a
+        href={discord}
+        class="nav-icon"
+        aria-label="SwiftCrossUI Discord server"
+        title="Discord"
+      >
+        <DiscordLogo size="17" ariaLabel="" />
+      </a>
       <a
         href={sponsor}
-        class="nav-sponsor"
+        class="nav-icon nav-sponsor"
         aria-label="Sponsor SwiftCrossUI"
         title="Sponsor SwiftCrossUI"
       >
@@ -33,6 +51,7 @@
         on:click={toggleMode}
         variant="outline"
         size="icon"
+        class="h-9 w-9"
         aria-label="Toggle theme"
       >
         <Sun

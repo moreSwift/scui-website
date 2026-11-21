@@ -9,8 +9,7 @@ export const quickStartSteps = [
     title: "Create a project",
     lines: [
       "sbun templates update",
-      "sbun create HelloWorld \\",
-      "  --template SwiftCrossUI",
+      "sbun create HelloWorld --template SwiftCrossUI",
     ],
   },
   {

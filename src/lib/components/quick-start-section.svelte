@@ -13,7 +13,7 @@
       <p class="eyebrow">Quick start</p>
       <h2 class="section-title">Run your first app.</h2>
       <p class="section-lead">
-        Swift Bundler builds bundles apps for every major platform and handles
+        Swift Bundler bundles apps for every major platform and handles
         device/simulator deployment. Its SwiftCrossUI template gives you a
         working window in minutes.
       </p>

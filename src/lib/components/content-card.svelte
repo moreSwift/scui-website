@@ -3,6 +3,7 @@
   export let description: string;
   export let tags: string[] = [];
   export let href: string | undefined = undefined;
+  export let iconColor: string | undefined = undefined;
 </script>
 
 <svelte:element
@@ -11,7 +12,11 @@
   {...href ? { href } : {}}
 >
   <div class="card-top">
-    <span class="card-icon"><slot name="icon" /></span>
+    <span
+      class="card-icon"
+      style={iconColor ? `--card-icon-color: ${iconColor}` : undefined}
+      ><slot name="icon" /></span
+    >
     <h3>{title}</h3>
   </div>
   <p>{description}</p>

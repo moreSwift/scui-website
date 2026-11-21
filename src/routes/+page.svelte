@@ -5,7 +5,6 @@
   import ContentCard from "$lib/components/content-card.svelte";
   import ExampleGrid from "$lib/components/example-grid.svelte";
   import HeroSection from "$lib/components/hero-section.svelte";
-  import InfoCard from "$lib/components/info-card.svelte";
   import MobileSection from "$lib/components/mobile-section.svelte";
   import PageSection from "$lib/components/page-section.svelte";
   import PlatformIcon from "$lib/components/platform-icon.svelte";
@@ -61,6 +60,7 @@
           title={platform.name}
           description={platform.description}
           tags={[platform.backend]}
+          iconColor={platform.color}
         >
           <PlatformIcon slot="icon" name={platform.icon} size={22} />
         </ContentCard>
@@ -72,7 +72,7 @@
 
   <PageSection muted>
     <SectionHeading eyebrow="What's included">
-      <svelte:fragment slot="title">The building blocks.</svelte:fragment>
+      <svelte:fragment slot="title">Fully featured.</svelte:fragment>
     </SectionHeading>
 
     <CardGrid className="feature-card-grid">
@@ -81,6 +81,7 @@
           title={feature.title}
           description={feature.description}
           tags={feature.tags}
+          iconColor={feature.color}
         >
           <svelte:component
             this={feature.icon}
@@ -102,41 +103,13 @@
     </SectionNote>
   </PageSection>
 
-  <PageSection>
-    <SectionHeading eyebrow="Backends">
-      <svelte:fragment slot="title">Native by default.</svelte:fragment>
-      <svelte:fragment slot="lead">
-        Each platform has a native backend that renders your app using the
-        platform's native UI toolkit. For advanced usecases such as embedded
-        devices, you can bring your own backend.
-      </svelte:fragment>
-    </SectionHeading>
-
-    <CardGrid columns={2}>
-      <InfoCard title="Use a built-in backend">
-        <code>DefaultBackend</code> automatically selects the best backend for
-        your target platform. Choose <code>AppKitBackend</code>,
-        <code>UIKitBackend</code>,
-        <code>AndroidBackend</code>, <code>WinUIBackend</code>,
-        <code>GtkBackend</code> or <code>Gtk3Backend</code> to achieve a native look.
-      </InfoCard>
-      <InfoCard title="Bring your own">
-        The <a
-          href="https://docs.swiftcrossui.dev/documentation/swiftcrossui/backendfeatures"
-          ><code>BackendFeatures</code></a
-        > system makes it easy to implement new backends. Each feature has its own
-        protocol. You can extend existing backends to implement missing features from
-        your own app code.
-      </InfoCard>
-    </CardGrid>
-  </PageSection>
+  <QuickStartSection />
 
   <PageSection id="examples" muted>
     <SectionHeading eyebrow="Examples">
-      <svelte:fragment slot="title">See it in action</svelte:fragment>
+      <svelte:fragment slot="title">Browse our examples.</svelte:fragment>
       <svelte:fragment slot="lead">
-        The SwiftCrossUI repository contains over 20 example apps, from a simple
-        counter to a music player.
+        The SwiftCrossUI repository contains over 20 example apps.
       </svelte:fragment>
     </SectionHeading>
 
@@ -151,13 +124,13 @@
         <ArrowRight size="16" ariaLabel="" />
       </ButtonLink>
       <a href={`${github}/tree/main/Examples/Sources`} class="text-link">
-        View the source on GitHub
+        <span class="sm:hidden"> View on GitHub </span>
+        <span class="hidden sm:inline"> View source on GitHub </span>
       </a>
     </SectionActions>
-  </PageSection>
 
-  <QuickStartSection />
-  <SupportBand />
+    <SupportBand />
+  </PageSection>
 </main>
 
 <SiteFooter />
