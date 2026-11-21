@@ -25,8 +25,16 @@ export const platformCards = [
     href: `${docs}/documentation/swiftcrossui/uikitbackend`,
   },
   {
+    name: "tvOS",
+    icon: "tvos" as const,
+    backend: "UIKitBackend",
+    description: "UIKit is perfect for the big screen.",
+    href: `${docs}/documentation/swiftcrossui/uikitbackend`,
+  },
+  {
     name: "Android",
     icon: "android" as const,
+    color: "var(--icon-android)",
     backend: "AndroidBackend",
     description: "Android Views makes apps feel at home on Android.",
     href: `${docs}/documentation/swiftcrossui/androidbackend`,
@@ -34,6 +42,7 @@ export const platformCards = [
   {
     name: "Windows",
     icon: "windows" as const,
+    color: "var(--icon-windows)",
     backend: "WinUIBackend",
     description: "WinUI 3 makes apps fit in with modern Windows.",
     href: `${docs}/documentation/swiftcrossui/winuibackend`,
@@ -41,15 +50,9 @@ export const platformCards = [
   {
     name: "Linux",
     icon: "linux" as const,
+    color: "var(--icon-linux)",
     backend: "GtkBackend",
     description: "GTK 4 feels native on GNOME.",
     href: `${docs}/documentation/swiftcrossui/gtkbackend`,
-  },
-  {
-    name: "tvOS",
-    icon: "tvos" as const,
-    backend: "UIKitBackend",
-    description: "UIKit is perfect for the big screen.",
-    href: `${docs}/documentation/swiftcrossui/uikitbackend`,
   },
 ];

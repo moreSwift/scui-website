@@ -20,26 +20,26 @@
 
     <div class="mobile-copy">
       <p class="eyebrow">Mobile</p>
-      <h2 class="section-title">The same app, built for touch.</h2>
+      <h2 class="section-title">Optimized for touch.</h2>
       <p class="section-lead">
         The same views and state work across desktop and mobile, with additional
         APIs for touch.
       </p>
 
       <ul class="feature-list">
-        <CheckItem as="li" title="Adaptive navigation.">
+        <CheckItem as="li" title="Adaptive navigation">
           <code>NavigationSplitView</code> becomes a single-column layout on
           phones, while <code>NavigationStack</code> keeps native back behaviour.
         </CheckItem>
-        <CheckItem as="li" title="Fluid sheets.">
+        <CheckItem as="li" title="Fluid sheets">
           Sheets support detents, and interactive dismissal.
         </CheckItem>
-        <CheckItem as="li" title="Device-aware layout.">
+        <CheckItem as="li" title="Device-aware layout">
           Branch on device class to make sure that your app always looks great.
         </CheckItem>
-        <CheckItem as="li" title="Simulator and device workflow.">
-          Run on iOS and Android simulators and devices from one project with
-          Swift Bundler.
+        <CheckItem as="li" title="Simulators and devices">
+          Run on iOS and Android simulators and devices easily with Swift
+          Bundler.
         </CheckItem>
       </ul>
 

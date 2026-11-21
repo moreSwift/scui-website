@@ -155,8 +155,10 @@ struct ProfileView: View {
 
 <PageSection id="features">
   <SectionHeading eyebrow="Declarative UI">
-    <svelte:fragment slot="title">
-      Feels like SwiftUI.<br />Runs where SwiftUI can't.
+    <svelte:fragment slot="title">Familiar API.</svelte:fragment>
+    <svelte:fragment slot="lead">
+      SwiftCrossUI's API is familiar to you and your agents, making it easy to
+      adopt.
     </svelte:fragment>
   </SectionHeading>
 
@@ -224,7 +226,7 @@ struct ProfileView: View {
         <code>@State</code>, <code>@Binding</code>, <code>@Environment</code>
         and <code>@AppStorage</code> update views automatically.
       </CheckItem>
-      <CheckItem as="li" title="Platform features">
+      <CheckItem as="li" title="Platform integration">
         Sheets, alerts, menus, file pickers, URL handling and multi-window
         scenes are built in.
       </CheckItem>
