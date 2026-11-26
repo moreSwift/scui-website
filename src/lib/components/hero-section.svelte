@@ -1,9 +1,9 @@
 <script lang="ts">
   import ButtonLink from "$lib/components/button-link.svelte";
   import PlatformIcon from "$lib/components/platform-icon.svelte";
+  import SocialProof from "$lib/components/social-proof.svelte";
   import * as Tabs from "$lib/components/ui/tabs";
-  import { platforms } from "$lib/content/platforms";
-  import { docs, github, sponsor } from "$lib/site";
+  import { docs, github } from "$lib/site";
   import ArrowRight from "svelte-radix/ArrowRight.svelte";
   import GithubLogo from "svelte-radix/GithubLogo.svelte";
 
@@ -58,6 +58,11 @@
       <span class="gradient-text">Everywhere.</span>
     </h1>
 
+    <p class="hero-lead">
+      A SwiftUI-style framework for building native apps in Swift. Write your
+      UI once and run it on macOS, Linux, Windows, iOS, Android and tvOS.
+    </p>
+
     <div class="hero-actions">
       <ButtonLink href={`${docs}/tutorials/swiftcrossui/quick-start`} size="lg">
         Get started
@@ -69,23 +74,7 @@
       </ButtonLink>
     </div>
 
-    <div class="hero-platforms">
-      <span class="hero-platforms-label">Runs on</span>
-      {#each platforms as platform}
-        <span class="platform-chip">
-          <PlatformIcon name={platform.icon} size={15} />
-          {platform.name}
-        </span>
-      {/each}
-    </div>
-
-    <p class="hero-support">
-      Enjoying SwiftCrossUI?
-      <a href={sponsor} class="sponsor-link">
-        Sponsor its development
-        <ArrowRight size="15" ariaLabel="" />
-      </a>
-    </p>
+    <SocialProof />
   </div>
 
   <div class="showcase">

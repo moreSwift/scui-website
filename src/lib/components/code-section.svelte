@@ -210,8 +210,8 @@ struct ProfileView: View {
 
       <div class="code-footer">
         <span>Swift 5.10+</span>
-        <a href={`${docs}/tutorials/swiftcrossui/quick-start`}>
-          Read the quick start
+        <a href={`${docs}/documentation/swiftcrossui/`}>
+          Explore the API
           <ArrowRight size="14" ariaLabel="" />
         </a>
       </div>

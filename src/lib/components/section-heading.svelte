@@ -6,6 +6,6 @@
   <p class="eyebrow">{eyebrow}</p>
   <h2 class="section-title"><slot name="title" /></h2>
   {#if $$slots.lead}
-    <p class="section-lead"><slot name="lead" /></p>
+    <div class="section-lead"><slot name="lead" /></div>
   {/if}
 </div>

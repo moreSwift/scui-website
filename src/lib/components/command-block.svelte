@@ -1,6 +1,13 @@
 <script lang="ts">
+  import Check from "svelte-radix/Check.svelte";
+  import Copy from "svelte-radix/Copy.svelte";
+  import { onDestroy } from "svelte";
+
   export let lines: string[];
   export let className = "";
+
+  let copied = false;
+  let resetTimer: ReturnType<typeof setTimeout> | undefined;
 
   type Token = { text: string; className?: string };
 
@@ -47,10 +54,42 @@
 
     return tokens;
   }
+
+  async function copyCommand() {
+    try {
+      await navigator.clipboard.writeText(lines.join("\n"));
+      copied = true;
+      if (resetTimer) clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => (copied = false), 1600);
+    } catch {
+      // Clipboard access can be denied; leave the button unchanged.
+    }
+  }
+
+  onDestroy(() => {
+    if (resetTimer) clearTimeout(resetTimer);
+  });
 </script>
 
-<pre class={`command-block ${className}`}><code
-    >{#each tokenize(lines) as token}{#if token.className}<span
-          class={token.className}>{token.text}</span
-        >{:else}{token.text}{/if}{/each}</code
-  ></pre>
+<div class="command-shell">
+  <pre class={`command-block ${className}`}><code
+      >{#each tokenize(lines) as token}{#if token.className}<span
+            class={token.className}>{token.text}</span
+          >{:else}{token.text}{/if}{/each}</code
+    ></pre>
+  <button
+    type="button"
+    class="command-copy"
+    class:copied
+    on:click={copyCommand}
+    aria-label={copied ? "Copied" : "Copy command"}
+    title={copied ? "Copied" : "Copy command"}
+  >
+    {#if copied}
+      <Check size="13" ariaLabel="" />
+    {:else}
+      <Copy size="13" ariaLabel="" />
+    {/if}
+    <span>{copied ? "Copied" : "Copy"}</span>
+  </button>
+</div>
