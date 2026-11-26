@@ -213,6 +213,19 @@ nav section {
   gap: 0.45rem;
 }
 
+.nav-theme {
+  background: transparent !important;
+  border-color: var(--site-border) !important;
+}
+
+.nav-theme:hover {
+  background: color-mix(
+    in srgb,
+    hsl(var(--foreground)) 6%,
+    transparent
+  ) !important;
+}
+
 .nav-center > a,
 .nav-docs {
   position: relative;
@@ -986,6 +999,60 @@ p code {
   list-style: none;
 }
 
+.code-notes {
+  min-width: 0;
+}
+
+.code-annotations {
+  display: grid;
+  gap: 1.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.code-annotation {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.annotation-number {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--accent-bg-blue);
+  color: var(--accent-blue-strong);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.code-annotation h3 {
+  margin: 0.05rem 0 0.22rem;
+  font-size: 0.98rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.code-annotation p {
+  margin: 0;
+  color: var(--gray-fg);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.code-caveat {
+  margin: 1.3rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--site-border);
+  color: var(--gray-fg);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
 .check-item {
   display: flex;
   gap: 0.85rem;
@@ -1538,6 +1605,8 @@ a.content-card:hover .card-icon {
   display: inline-flex;
   align-items: center;
   gap: 2px;
+  width: fit-content;
+  flex-shrink: 0;
   margin-left: auto;
   padding: 2px;
   border: 1px solid #262b3a;
@@ -2518,13 +2587,13 @@ a.content-card:hover .card-icon {
   }
 
   .code-titlebar {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.5rem;
   }
 
   .code-file {
-    width: 100%;
-    margin-left: 0;
+    width: auto;
+    margin-left: auto;
   }
 
   .code-body {
@@ -2535,6 +2604,16 @@ a.content-card:hover .card-icon {
   .command-block {
     padding: 0.75rem 0.85rem;
     font-size: 0.8rem;
+  }
+
+  .terminal-card .command-block {
+    white-space: pre;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .terminal-note code {
+    white-space: nowrap;
   }
 
   .install-command-block {
@@ -2656,6 +2735,21 @@ a.content-card:hover .card-icon {
     display: none;
   }
 
+  .platform-wall {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0,
+      #000 calc(100% - 28px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      #000 0,
+      #000 calc(100% - 28px),
+      transparent 100%
+    );
+  }
+
   .platform-tile {
     flex: 0 0 min(78%, 24rem);
     scroll-snap-align: start;
@@ -2732,13 +2826,13 @@ a.content-card:hover .card-icon {
   }
 
   .terminal-titlebar {
-    flex-wrap: wrap;
+    gap: 0.45rem;
+    padding: 0.55rem 0.65rem;
   }
 
-  .terminal-platforms {
-    width: 100%;
-    margin-left: 0;
-    justify-content: center;
+  .terminal-platforms button {
+    padding: 0.22rem 0.38rem;
+    font-size: 0.62rem;
   }
 }
 
