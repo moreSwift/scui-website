@@ -1,11 +1,9 @@
 <script lang="ts">
   import Brand from "$lib/components/brand.svelte";
   import { Button } from "$lib/components/ui/button";
-  import { discord, docs, github, sponsor } from "$lib/site";
+  import { docs, github } from "$lib/site";
   import { toggleMode } from "mode-watcher";
-  import DiscordLogo from "svelte-radix/DiscordLogo.svelte";
   import GithubLogo from "svelte-radix/GithubLogo.svelte";
-  import Heart from "svelte-radix/Heart.svelte";
   import Moon from "svelte-radix/Moon.svelte";
   import Sun from "svelte-radix/Sun.svelte";
 </script>
@@ -15,7 +13,6 @@
     <Brand />
 
     <div class="nav-center">
-      <a href="#features">Overview</a>
       <a href="#platforms">Platforms</a>
       <a href="#quickstart">Quick start</a>
       <a href="#examples">Examples</a>
@@ -30,22 +27,6 @@
         title="GitHub"
       >
         <GithubLogo size="17" ariaLabel="" />
-      </a>
-      <a
-        href={discord}
-        class="nav-icon"
-        aria-label="SwiftCrossUI Discord server"
-        title="Discord"
-      >
-        <DiscordLogo size="17" ariaLabel="" />
-      </a>
-      <a
-        href={sponsor}
-        class="nav-icon nav-sponsor"
-        aria-label="Sponsor SwiftCrossUI"
-        title="Sponsor SwiftCrossUI"
-      >
-        <Heart size="17" ariaLabel="" />
       </a>
       <Button
         on:click={toggleMode}
@@ -62,6 +43,11 @@
         />
         <span class="sr-only">Toggle theme</span>
       </Button>
+      <a
+        href="#quickstart"
+        class="nav-start">Get started</a
+      >
     </div>
   </nav>
 </header>
+

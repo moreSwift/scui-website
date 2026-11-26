@@ -9,7 +9,11 @@
   };
 </script>
 
-<article class="example-card">
+<a
+  class="example-card"
+  href={`${github}/tree/main/Examples/Sources/${example.name}`}
+  aria-label={`View ${example.name} source on GitHub`}
+>
   <div class="example-card-image">
     <img
       src={example.image}
@@ -22,12 +26,9 @@
   <div class="example-card-content">
     <strong>{example.name}</strong>
     <span>{example.description}</span>
-    <a
-      class="example-card-link"
-      href={`${github}/tree/main/Examples/Sources/${example.name}`}
-    >
-      View the source
+    <span class="example-card-cta">
+      View source
       <ArrowRight size="14" ariaLabel="" />
-    </a>
+    </span>
   </div>
-</article>
+</a>
