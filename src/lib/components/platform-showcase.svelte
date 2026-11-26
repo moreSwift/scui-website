@@ -13,11 +13,9 @@
     <svelte:fragment slot="lead">
       <p>
         The same MusicPlayerExample, rendered with each platform's own widgets.
-        No web view, no lookalike controls.
-      </p>
-      <p>
-        On phones, split views collapse to a single column, sheets support
-        detents, and safe areas are handled for you.
+        No web view, no lookalike controls. On phones, split views collapse to a
+        single column, sheets support detents, and safe areas are handled for
+        you.
       </p>
       <a
         class="platform-support-link"

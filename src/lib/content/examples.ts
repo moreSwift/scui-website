@@ -8,11 +8,11 @@ export const examples = [
   {
     name: "NotesExample",
     description: "List/detail navigation and multi-line text editing.",
-    image: "/images/examples/notes-card.webp",
+    image: "/images/examples/notes-example.webp",
   },
   {
     name: "GradientsExample",
     description: "A gallery of supported gradients.",
-    image: "/images/examples/gradients.webp",
+    image: "/images/examples/gradients-example.webp",
   },
 ];
