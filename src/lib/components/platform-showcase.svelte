@@ -30,7 +30,7 @@
   <div class="platform-wall">
     {#each platforms as platform}
       <a
-        class={`platform-tile ${platform.kind}`}
+        class={`platform-tile ${platform.kind} platform-${platform.icon}`}
         href={platform.href}
         aria-label={`${platform.name} backend documentation`}
       >
